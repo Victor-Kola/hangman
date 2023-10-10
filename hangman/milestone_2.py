@@ -1,13 +1,13 @@
 import random
-word_list = ["banana", "watermelon", "apple", "cherries", "black grapes"]
-print(word_list)
+favourite_fruits = ["banana", "watermelon", "apple", "cherries", "black grapes"]
+print(favourite_fruits)
 
-word = random.choice(word_list)
+word = random.choice(favourite_fruits)
 print(word)
 
-guess = input("Please input a letter " ) 
+guessed_letter = input("Please input a letter " ) 
 
-if guess == 1 and guess.isalpha() == True:
+if len(guessed_letter) == 1 and guessed_letter.isalpha() == True:
     print("Good guess!")
 else:
     print("Oops! That is not a valid input")
