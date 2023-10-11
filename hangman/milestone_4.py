@@ -26,6 +26,11 @@ def ask_for_input():
 ask_for_input()
 
 class Hangman:
-    __init__(self, word_list, num_lives == 5):
-    self.word = word 
-    self.
+    def __init__(self, word_list, num_lives = 5):
+        self.num_lives = num_lives
+        self.word = word
+        self.word_guessed = list(word).join(['_' for char in list])
+        self.num_letters = len(word)
+        self.word_list = favourite_fruits
+        self.list_of_guesses = []
+
