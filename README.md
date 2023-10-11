@@ -13,3 +13,5 @@ Usage instructions
 File structure of the project - There is a file for each milestone and we aim to bring it all together in the end. 
 License information - There is no license it is free for all. 
 
+We have updated milestone 3 to create two functions that wil ask our user for their input and check if their input is in the random word we have generated. What we have learned so far is how to convert words to lowercase, define functions and also utilising while and for loops. 
+
