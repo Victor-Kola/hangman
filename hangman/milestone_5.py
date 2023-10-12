@@ -1,6 +1,5 @@
 import random
 
-
 class Hangman:
     """This is a class to represent the game of Hangman.
     
@@ -45,6 +44,7 @@ class Hangman:
         self.word_list = word_list
         self.list_of_guesses = []
 
+
     def check_guess(self, guessed_letter):
         """ 
         Checks the guess that was input by the player. 
@@ -61,9 +61,9 @@ class Hangman:
         if lowercase_guess in self.unique_letters:
             print(f"Good GUESS! {lowercase_guess} is in the word.")
             for index, char in enumerate(self.word):
-                if lowercase_guess in self.word:
+                if char in lowercase_guess:
                     position = self.word.index(lowercase_guess)
-                    self.word_guessed[position] = lowercase_guess
+                    self.word_guessed[index] = lowercase_guess
             self.unique_letters.remove(lowercase_guess) 
         else:
             print(f"Sorry, {lowercase_guess} is not in the word. Try again")
@@ -85,7 +85,25 @@ class Hangman:
                 self.list_of_guesses.append(guessed_letter)
                 break
 
-favourite_fruits = ["banana", "watermelon", "apple", "cherries", "black grapes"]
-game = Hangman(favourite_fruits)
-"Calls the game into play"
-result = game.ask_for_input()
+
+def play_game(word_list):
+    """
+    Runs the game """  
+    num_lives = 5
+    game = Hangman(word_list, num_lives)    
+    print(game.word_guessed)
+    while True:
+        if num_lives == 0:
+            print("You lost!")
+        if len(game.unique_letters) > 0:
+           game.ask_for_input()
+           print(game.word_guessed)
+        if game.num_lives != 0 and len(game.unique_letters) <= 0:
+            print("Congratulations. You've won the game!")
+            break
+
+favourite_fruit = ["banana", "watermelon", "apple", "cherries", "black grapes"]
+
+play_game(favourite_fruit)
+
+
