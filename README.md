@@ -15,3 +15,5 @@ License information - There is no license it is free for all.
 
 We have updated milestone 3 to create two functions that wil ask our user for their input and check if their input is in the random word we have generated. What we have learned so far is how to convert words to lowercase, define functions and also utilising while and for loops. 
 
+We have updated milestone 4 to define the hangman class, we have created two methods for this class which include, checking the guess and askking for input. The aim of this part of the project is to create an instance of the Hangman game that should be played, reduce the players life when they get it wrong but then also replace the missing letter if they get it right. 
+
