@@ -89,18 +89,18 @@ class Hangman:
 def play_game(word_list):
     """
     Runs the game """  
-    num_lives = 5
-    game = Hangman(word_list, num_lives)    
+    game = Hangman(word_list)    
     print(game.word_guessed)
-    while True:
-        if num_lives == 0:
-            print("You lost!")
-        if len(game.unique_letters) > 0:
+    while game.num_lives and len(game.unique_letters) > 0:
            game.ask_for_input()
            print(game.word_guessed)
-        if game.num_lives != 0 and len(game.unique_letters) <= 0:
-            print("Congratulations. You've won the game!")
-            break
+
+
+    if game.num_lives == 0:
+        print("You lost!")
+    else:
+        print("Congratulations. You've won the game!")
+            
 
 favourite_fruit = ["banana", "watermelon", "apple", "cherries", "black grapes"]
 
